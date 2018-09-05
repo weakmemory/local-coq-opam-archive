@@ -5,6 +5,9 @@ packages/coq-sflib/coq-sflib.dev/descr ff5b725cf251306f07939b6ff5a0d073 0o644
 packages/coq-promising/coq-promising.dev/url 36e16b8f30513b768d1e19b06c3a416b 0o644
 packages/coq-promising/coq-promising.dev/opam f0e654b289cd3bb79612ea1f37646af2 0o644
 packages/coq-promising/coq-promising.dev/descr 82b326e8d2522e98d614d80b5946243f 0o644
+packages/coq-imm/coq-imm.dev/url 8b5b556d52c181a1fa722c86309f213e 0o644
+packages/coq-imm/coq-imm.dev/opam ab5637d5486ba50657aa60d3dd076e6a 0o644
+packages/coq-imm/coq-imm.dev/descr bf6a6bdb18ce425383926a8db44ec4a8 0o644
 packages/coq-hahn/coq-hahn.dev/url 06bc0374bd2f7af69e057b80eb68242f 0o644
 packages/coq-hahn/coq-hahn.dev/opam 2714a0f8a92309f59d6c099a8d7533c9 0o644
 packages/coq-hahn/coq-hahn.dev/descr 7c32a3d8b200a3025cbddb9a26540279 0o644
