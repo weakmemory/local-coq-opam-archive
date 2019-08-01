@@ -14,7 +14,7 @@ build: [
 install: [make "-f" "Makefile.coq" "install"]
 remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/imm"]
 depends: [
-  "coq" { (>= "8.8.1" & < "8.9~") | (= "dev") }
+  "coq" { (>= "8.9.1") | (= "dev") }
   "coq-promising" { >= "1.1" }
-  "coq-hahn" { >= "1.1" }
+  "coq-hahn" { >= "1.1" | (= "dev") }
 ]
