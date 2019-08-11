@@ -12,7 +12,7 @@ remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/hahn"]
 depends: [
   "coq" { (>= "8.9.1") | (= "dev") }
 ]
-url: {
+url {
   git: "https://github.com/vafeiadis/hahn.git"
 }
 description: """
