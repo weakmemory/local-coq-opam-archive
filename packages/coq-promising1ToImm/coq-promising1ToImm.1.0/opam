@@ -1,0 +1,29 @@
+opam-version: "2.0"
+name: "coq-promising1ToImm"
+maintainer: "Anton Podkopaev <podkoav239@gmail.com>"
+authors: ["Anton Podkopaev <podkoav239@gmail.com>"
+          "Ori Lahav <ori.lahav@tau.ac.il>"
+          "Viktor Vafeiadis <viktor@mpi-sws.org>"]
+homepage: "https://github.com/weakmemory/promising1ToImm"
+bug-reports: "https://github.com/weakmemory/promising1ToImm/issues"
+license: "MIT"
+dev-repo: "https://github.com/weakmemory/promising1ToImm.git"
+build: [
+  [make "-j%{jobs}%" "build"]
+]
+install: [make "-f" "Makefile.coq" "install"]
+remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/imm"]
+depends: [
+  "coq" { (>= "8.9.1") | (= "dev") }
+  "coq-promising" { = "dev" }
+  "coq-promising-lib" { = "dev" }
+  "coq-hahn" { >= "1.1" | (= "dev") }
+  "coq-imm" { = "1.2" }
+]
+url {
+  src: "https://github.com/weakmemory/promising1ToImm/archive/1.0.tar.gz"
+}
+description: """
+Coq proofs of compilation correctness from Promising 1.0 to IMM stated in
+``Bridging the Gap Between Programming Languages and Hardware Weak Memory Models'' paper.
+"""
