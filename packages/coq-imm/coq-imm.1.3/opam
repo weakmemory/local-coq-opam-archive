@@ -1,0 +1,28 @@
+opam-version: "2.0"
+name: "coq-imm"
+maintainer: "Anton Podkopaev <podkoav239@gmail.com>"
+authors: ["Anton Podkopaev <podkoav239@gmail.com>"
+          "Ori Lahav <ori.lahav@tau.ac.il>"
+          "Viktor Vafeiadis <viktor@mpi-sws.org>"]
+homepage: "https://github.com/weakmemory/imm"
+bug-reports: "https://github.com/weakmemory/imm/issues"
+license: "MIT"
+dev-repo: "https://github.com/weakmemory/imm.git"
+build: [
+  [make "-j%{jobs}%" "build"]
+]
+install: [make "-f" "Makefile.coq" "install"]
+remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/imm"]
+depends: [
+  "coq" { (>= "8.9.1") | (= "dev") }
+  "coq-promising" { = "dev" }
+  "coq-promising-lib" { = "dev" }
+  "coq-hahn" { >= "1.1" | (= "dev") }
+]
+url {
+  src: "https://github.com/weakmemory/imm/archive/1.3.tar.gz"
+}
+description: """
+Coq definition of Intermediate Memory Model (IMM) and compilation correctness proofs stated in
+``Bridging the Gap Between Programming Languages and Hardware Weak Memory Models'' paper.
+"""
