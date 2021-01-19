@@ -1,0 +1,20 @@
+opam-version: "2.0"
+name: "coq-sflib"
+maintainer: "sunghwan.lee@sf.snu.ac.kr"
+synopsis: "Software Foundations Laboratory's lemmas and tactics"
+homepage: "https://github.com/snu-sf/sflib/"
+dev-repo: "git+https://github.com/snu-sf/sflib.git"
+bug-reports: "https://github.com/snu-sf/sflib/issues/"
+authors: [
+  "Chung-Kil Hur <gil.hur@sf.snu.ac.kr>"
+  "Jeehoon Kang <jeehoon.kang@kaist.ac.kr>"
+]
+build: [make "-j%{jobs}%"]
+install: [make "-f" "Makefile.coq" "install"]
+remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/sflib"]
+depends: [
+  "coq" { (>= "8.8") }
+]
+url {
+  git: "https://github.com/snu-sf/sflib.git#master"
+}

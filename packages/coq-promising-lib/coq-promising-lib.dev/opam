@@ -1,0 +1,22 @@
+opam-version: "2.0"
+name: "coq-promising-lib"
+maintainer: "sunghwan.lee@sf.snu.ac.kr"
+synopsis: "Coq library for promising semantics"
+homepage: "https://github.com/snu-sf/promising-lib/"
+dev-repo: "git+https://github.com/snu-sf/promising-lib.git"
+bug-reports: "https://github.com/snu-sf/promising-lib/issues/"
+authors: [
+  "Chung-Kil Hur <gil.hur@sf.snu.ac.kr>"
+  "Jeehoon Kang <jeehoon.kang@kaist.ac.kr>"
+  "Sung-Hwan Lee <sunghwan.lee@sf.snu.ac.kr>"
+]
+build: [make "-j%{jobs}%"]
+install: [make "-f" "Makefile.coq" "install"]
+remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/PromisingLib"]
+depends: [
+  "coq" { (>= "8.9") & (< "8.10") }
+  "coq-sflib" { (= "dev") }
+]
+url {
+  git: "https://github.com/snu-sf/promising-lib.git#master"
+}
