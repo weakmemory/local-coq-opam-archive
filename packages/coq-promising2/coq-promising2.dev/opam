@@ -18,9 +18,9 @@ build: [make "-j%{jobs}%" "build"]
 install: [make "-f" "Makefile.coq" "install"]
 remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/Promising2"]
 depends: [
-  "coq" { (>= "8.9") & (< "8.10") }
+  "coq" { (>= "8.13.1") }
   "coq-sflib" { (= "dev") }
-  "coq-paco" { (= "2.0.3") }
+  "coq-paco" { (>= "4.1.1") }
   "coq-promising-lib" { (= "dev") }
 ]
 url {
