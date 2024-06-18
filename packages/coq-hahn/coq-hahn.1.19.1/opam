@@ -13,7 +13,7 @@ depends: [
   "coq" { (>= "8.15.2") | (= "dev") }
 ]
 url {
-  git: "https://github.com/weakmemory/hahn.git"
+  src: "https://github.com/weakmemory/hahn/archive/1.19.1.tar.gz"
 }
 description: """
 Hahn is a Coq library that contains a useful collection of lemmas and tactics about lists and binary relations.

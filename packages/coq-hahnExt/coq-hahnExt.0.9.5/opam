@@ -1,0 +1,23 @@
+opam-version: "2.0"
+name: "coq-hahnExt"
+maintainer: "Anton Podkopaev <podkoav239@gmail.com>"
+authors: ["Anton Podkopaev <podkoav239@gmail.com>"]
+homepage: "https://github.com/weakmemory/hahnExt"
+bug-reports: "https://github.com/weakmemory/hahnExt/issues"
+license: "MIT"
+dev-repo: "https://github.com/weakmemory/hahnExt.git"
+build: [
+  [make "-j%{jobs}%" "build"]
+]
+install: [make "-f" "Makefile.coq" "install"]
+remove: ["rm" "-rf" "%{lib}%/coq/user-contrib/hahnExt"]
+depends: [
+  "coq"               { (>= "8.17.0") | (= "dev") }
+  "coq-hahn"          { (>= "1.19.1") | (= "dev") }
+]
+url {
+  src: "https://github.com/weakmemory/hahnExt/archive/0.9.5.tar.gz"
+}
+description: """
+An extension to the Hahn library with extra definition and lemmas about sets and relations. 
+"""

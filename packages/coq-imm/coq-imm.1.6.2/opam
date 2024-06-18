@@ -20,7 +20,7 @@ depends: [
   "coq-hahnExt"       { (>= "0.9.5" ) | (= "dev") }
 ]
 url {
-  git: "https://github.com/weakmemory/imm"
+  src: "https://github.com/weakmemory/imm/archive/1.6.2.tar.gz"
 }
 description: """
 Coq definition of Intermediate Memory Model (IMM) and compilation correctness proofs stated in
